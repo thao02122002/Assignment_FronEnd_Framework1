@@ -84,7 +84,7 @@ productId: string
     if(this.productId !== '' && this.productId !== undefined) {
         return  this.productService.updateProduct(this.productId, data).subscribe(data => {
           if(data) {
-            this.toastr.success('Thêm sp thành công')
+            this.toastr.success('Sửa sp thành công, chờ 3s để chuyển trang')
             setTimeout(() => {
               this.redirectToList()
               // this.router.navigate(['/admin','products'])
@@ -98,7 +98,7 @@ productId: string
    return this.productService.createProduct(data).subscribe(data => {
       //chuyển trang về list
       if(data) {
-        this.toastr.success('Thêm sp thành công')
+        this.toastr.success('Thêm sp thành công, chờ 3s để chuyển trang')
         setTimeout(() => {
           this.redirectToList()
           // this.router.navigate(['/admin','products'])
