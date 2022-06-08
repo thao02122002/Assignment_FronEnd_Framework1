@@ -21,6 +21,7 @@ import { HomeComponent } from './pages/client/home/home.component';
 import { ProductComponent } from './pages/client/product/product.component';
 import { ProductDetailComponent } from './pages/client/product-detail/product-detail.component';
 import { CartComponent } from './pages/client/cart/cart.component';
+import { SignupComponent } from './pages/auth/signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { CartComponent } from './pages/client/cart/cart.component';
     HomeComponent,
     ProductComponent,
     ProductDetailComponent,
-    CartComponent
+    CartComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

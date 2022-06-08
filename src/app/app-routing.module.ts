@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/client/home/home.component';
 import { ProductComponent } from './pages/client/product/product.component';
 import { ProductDetailComponent } from './pages/client/product-detail/product-detail.component';
 import { CartComponent } from './pages/client/cart/cart.component';
+import { SignupComponent } from './pages/auth/signup/signup.component';
 const routes: Routes = [
   {
     path: '',
@@ -68,6 +69,10 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent
+      },
+      {
+        path: 'signup',
+        component: SignupComponent
       }
     ]
   }
