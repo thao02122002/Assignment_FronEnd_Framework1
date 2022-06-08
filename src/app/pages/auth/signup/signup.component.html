@@ -1,7 +1,4 @@
 
-
-
-
 <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-md w-full space-y-8">
     <div>
@@ -18,10 +15,13 @@
         <div>
           <label for="email-address" class="sr-only">Email address</label>
           <input id="email-address" formControlName="email" type="email"   class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+        <app-show-validate [field]="signUpForm.get('email')" key="Email user"></app-show-validate>
         </div>
         <div>
           <label for="password" class="sr-only">Password</label>
           <input id="password" formControlName="password" type="password"   class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+          <app-show-validate [field]="signUpForm.get('password')" key="Password user"></app-show-validate>
+        
         </div>
       </div>
 
