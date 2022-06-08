@@ -1,0 +1,7 @@
+<span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['required']">{{key}} k đc để trống</span><br>
+<span class="text-danger" *ngIf=" (field.dirty || field.touched) && field.errors?.['minlength']"> {{key}} phải từ {{field.errors?.['minlength'].requiredLength}}</span><br>
+<span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['min']">{{key}} tối thiểu là {{field.errors?.['min'].min}}</span><br>
+<span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['max']">{{key}} tối đa là {{field.errors?.['max'].max}}</span><br>
+<span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['email']">{{key}} phải đúng định dạng</span><br>
+<!-- Custom -->
+<span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['hasProductError']">{{key}} phải chứa từ 'book'</span><br>

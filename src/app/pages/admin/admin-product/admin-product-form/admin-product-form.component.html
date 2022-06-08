@@ -1,0 +1,57 @@
+<!-- định nghĩa biến để quản lí form -->
+<button class="btn btn-success"><a routerLink="/admin/products">DANH SÁCH</a></button>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+<div class="form-group">
+   <label for="">NAME</label>
+   <!-- định nghĩa thuộc tính để lắng nghe input -->
+   <input type="text" class="form-control" formControlName="name">
+   
+   <app-show-validate [field]="productForm.get('name')" key="Tên sản phẩm"></app-show-validate>
+   
+</div>
+<div class="form-group">
+   <label for="">PRICE</label>
+   <input type="number" class="form-control" formControlName="price">
+   
+   <app-show-validate [field]="productForm.get('price')" key="Giá sản phẩm"></app-show-validate>
+   
+</div>
+<div class="form-group">
+   <label for="">SALE_PRICE</label>
+   <input type="number" class="form-control" formControlName="salePrice">
+   
+   <app-show-validate [field]="productForm.get('salePrice')" key="Sale sản phẩm"></app-show-validate>
+   
+</div>
+<div class="form-group">
+   <label for="">DESCRIPTION</label>
+   <input type="text" class="form-control" formControlName="description">
+   
+   <app-show-validate [field]="productForm.get('description')" key="Mô tả sản phẩm"></app-show-validate>
+   
+</div>
+<div class="form-group">
+   <label for="">IMAGE</label>
+   <input type="text" class="form-control" formControlName="imageUrl">
+   
+   <app-show-validate [field]="productForm.get('imageUrl')" key="Ảnh sản phẩm"></app-show-validate>
+   
+</div>
+<div class="form-group">
+   <label for="">STATUS</label>
+   <input type="number" class="form-control" formControlName="status">
+   
+   <app-show-validate [field]="productForm.get('status')" key="Trạng thái sản phẩm"></app-show-validate>
+   
+</div>
+ 
+<!-- <div class="form-group">
+   <label for="">CATEGORY</label>
+   <input type="number" class="form-control" formControlName="category">
+   
+   <app-show-validate [field]="productForm.get('category')" key="Danh mục sản phẩm"></app-show-validate>
+   
+</div> -->
+<div><button class="btn btn-success" [disabled]="!productForm.valid">Submit</button></div>
+</form>
+
