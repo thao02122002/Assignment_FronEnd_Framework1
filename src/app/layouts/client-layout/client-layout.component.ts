@@ -11,5 +11,8 @@ export class ClientLayoutComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  logout(){
+    localStorage.removeItem('loggedInUser')
+  }
 
 }
