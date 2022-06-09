@@ -1,9 +1,56 @@
-<div>
+<div class="">
   
-  <div>ID SP: {{product._id}}</div>
+  <!-- <div>ID SP: {{product._id}}</div>
   <div>TÊN SP: {{product.name}}</div>
   <div>
     <input type="number" min="1" class="border border-black py-1 " [value]="cartItemValue" (input)="onInputValueChange($event)">
     <button (click)="onAddToCart()">Thêm vào giỏ hàng</button>
+  </div> -->
+
+<div class="grid grid-cols-12 border border-black rounded-xl">
+  <div class="col-span-4">
+    <div><img src="{{product.imageUrl}}" width="400px"></div>
+    
+  </div>
+  <div class="col-span-4">
+    <h1>{{product.name}}</h1>
+    <div class="pt-8 pb-2 "><span>Nhà xuất bản:</span><span><strong>NXB Kinh tế TP.Hồ Chí Minh</strong></span></div>
+    
+    <div class="pb-2"><span>Hình thức bìa:</span><span><strong>Bìa Mềm</strong></span></div>
+    
+    <h2 class="text-red-500 text-2xl"><strong>{{product.price}} đ</strong></h2>
+    <div><input type="number" min="1" class="border-2 px-2 border-black py-1 rounded-lg" [value]="cartItemValue" (input)="onInputValueChange($event)">
+      <button  (click)="onAddToCart()" class="border-2 border-red-500 rounded-lg py-1 px-2 text-red-500">Thêm vào giỏ hàng</button></div>
+   
+  </div>
+    
+    <div class="col-span-4 pt-20 ">
+      <span>Tác giả:</span><span><strong>Nhiều Tác Giả</strong></span>
+    </div>
+</div>
+<div class="py-4"></div>
+<div class="border border-black rounded-xl px-4">
+  <h1>Thông tin sản phẩm</h1>
+  <div class="grid grid-cols-12">
+    <div class="col-span-2">
+      <p>Giảm giá</p>
+      <p>Mô tả</p>
+      <p>Tác giả</p>
+      <p>Nhà XB</p>
+      <p>Hình thức</p>
+    </div>
+    <div class="col-span-3">
+      <p>{{product.salePrice}}%</p>
+      <p>{{product.description}}</p>
+      <p>Nhiều Tác Giả</p>
+      <p>NXB Kinh tế TP.Hồ Chí Min</p>
+      <p>Bìa Mềm</p>
+    </div>
+
   </div>
 </div>
+</div>
+
+
+
+  

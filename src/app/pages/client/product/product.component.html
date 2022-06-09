@@ -1,62 +1,22 @@
 
 <div class=" pb-4">
-  <div class="grid grid-cols-10 gap-4 pt-2 pb-8">
-    <div class="col-span-2" *ngFor="let product of products">
-      <div class="img">
-        <img src="{{product.imageUrl}}" width="300px">
+  <div class="border-2 rounded-lg border-gray-200">
+    <h3>Danh sách sản phẩm</h3>
+  <div class="grid grid-cols-12 gap-20 pt-2 pb-8 px-4 ">
+    
+    <div class="col-span-3" *ngFor="let product of products">
+      <div class="img overflow-hidden">
+        <img class="transition-transform duration-500 transform hover:scale-75" src="{{product.imageUrl}}" width="300px">
       </div>
       <div class="content">
         <h3>{{product.name}}</h3>
         <p>{{product.price}} đ</p>
-        <p>{{product.salePrice}}đ</p>
-        <button class="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white py-1 px-2 rounded-lg w-64"><a routerLink="/products/{{product._id}}"> Mua hàng</a></button>
+        <p>{{product.salePrice}}%</p>
+        <button class="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white py-1 px-2 rounded-lg w-64"><a class="no-underline text-red-500" routerLink="/products/{{product._id}}"> Mua hàng</a></button>
       </div>
     </div>
-    <!-- <div class=" col-span-2">
-     <div class="img">
-       <img src="https://cdn0.fahasa.com/media/catalog/product//i/m/image_180164_1_43_1_57_1_4_1_2_1_163.jpg" width="300px">
-     </div>
-     <div class="content">
-       <h3>SÁCH THAM KHẢO</h3>
-       <p>15.000 đ</p>
-       <p>20.000đ</p>
-       <button class="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white py-1 px-2 rounded-lg w-64">Mua hàng</button>
-     </div>
-   </div>
-   <div class=" col-span-2"> 
-     <div class="img">
-       <img src="https://cdn0.fahasa.com/media/catalog/product//i/m/image_180164_1_43_1_57_1_4_1_2_1_163.jpg" width="300px">
-     </div>
-     <div class="content">
-       <h3>SÁCH THAM KHẢO</h3>
-       <p>15.000 đ</p>
-       <p>20.000đ</p>
-       <button class="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white py-1 px-2 rounded-lg w-64">Mua hàng</button>
-     </div>
-   </div>
-   <div class=" col-span-2">
-     <div class="img">
-       <img src="https://cdn0.fahasa.com/media/catalog/product//i/m/image_180164_1_43_1_57_1_4_1_2_1_163.jpg" width="300px">
-     </div>
-     <div class="content">
-       <h3>SÁCH THAM KHẢO</h3>
-       <p>15.000 đ</p>
-       <p>20.000đ</p>
-       <button class="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white py-1 px-2 rounded-lg w-64">Mua hàng</button>
-     </div>
-   </div>
-   <div class=" col-span-2">
-     <div class="img">
-       <img src="https://cdn0.fahasa.com/media/catalog/product//i/m/image_180164_1_43_1_57_1_4_1_2_1_163.jpg" width="300px">
-     </div>
-     <div class="content">
-       <h3>SÁCH THAM KHẢO</h3>
-       <p>15.000 đ</p>
-       <p>20.000đ</p>
-       <button class="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white py-1 px-2 rounded-lg w-64">Mua hàng</button>
-     </div>
-   </div> -->
+    
   </div>
 <div class="text-center"><button class="border-2 border-red-500 bg-red-500 text-white py-1 px-2 rounded-lg w-96">Xem thêm</button></div>
-  
+</div>
  </div>

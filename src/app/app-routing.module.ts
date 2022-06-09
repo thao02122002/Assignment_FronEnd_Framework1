@@ -15,6 +15,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
 import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
 import { AdminCategoryDetailComponent } from './pages/admin/admin-category/admin-category-detail/admin-category-detail.component';
+import { CartClientComponent } from './pages/client/cart-client/cart-client.component';
 
 const routes: Routes = [
   {
@@ -35,7 +36,7 @@ const routes: Routes = [
       },
       {
         path: 'cart',
-        component: CartComponent
+        component: CartClientComponent
       }
     ]
   },

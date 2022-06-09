@@ -10,29 +10,33 @@
   <div class="container">
    <header>
     <nav>
-      <div class="grid grid-cols-12 gap-1">
-        <div class="col-span-4">
-          <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo.png" width="240px">
+      <div class="grid grid-cols-12">
+        <div class="col-span-3">
+          <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo.png" width="300px">
         </div>
-        <div class="col-span-1 "><a routerLink="/products">Sản phẩm</a> </div>
-        <div class="col-span-2"><a routerLink="/cart" class="group -m-2 p-2 flex items-center">
+        <div class="col-span-1 mx-auto  "><a class="no-underline text-black  hover:text-yellow-500" routerLink="/">Trang chủ</a> </div>
+        <div class="col-span-1 mx-auto "><a class="no-underline text-black" routerLink="/products">Sản phẩm</a> </div>
+        <div class="col-span-1 mx-auto "><a class="no-underline text-black" routerLink="/">Liên hệ</a> </div>
+        
+        <div class="col-span-3">
+          <form class="text-center">
+            <input type="text" class="border border-black py-2 rounded-md w-56">
+            <button class="border bg-red-500 text-white p-2 rounded-md">Gửi</button>
+          </form>
+        </div>
+        <div class="col-span-1"><a routerLink="/cart" class="group -m-2 p-2 flex items-center">
           <!-- Heroicon name: outline/shopping-bag -->
-          <svg class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" width="50px">
+          <svg class="flex-shrink-0 h-12 w-12 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" width="50px">
             <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
           </svg>
           <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"><app-cart></app-cart></span>
           <span class="sr-only">items in cart, view bag</span>
         </a></div>
-        <div class="col-span-3">
-          <form class="text-center">
-            <input type="text" class="border border-black py-2 rounded-md w-64">
-            <button class="border bg-red-500 text-white p-2 rounded-md">Gửi</button>
-          </form>
-        </div>
-        
-        <div class="col-span-2">
+        <div class="col-span-1 "><a routerLink="/auth/signup"><img src="https://cdn-icons-png.flaticon.com/128/456/456283.png" width="40px"></a> </div>
+        <div class="col-span-1">
          <button (click)="logout()"> <img src="https://cdn-icons-png.flaticon.com/128/6568/6568636.png" width="40px"></button>
         </div>
+       
         
       </div>
     </nav>

@@ -12,7 +12,7 @@
         <th>DESCRIPTION</th>
         <th>IMAGE</th>
         <th>STATUS</th>
-        <th>CATEGORY</th>
+        <!-- <th>CATEGORY</th> -->
         <th>ACTION</th>
 
       </tr>
@@ -24,7 +24,7 @@
         <td>{{product.price}}</td>
         <td>{{product.salePrice}}</td>
         <td>{{product.description}}</td>
-        <td>{{product.imageUrl}}</td>
+        <td><img src="{{product.imageUrl}}" width="50px"> </td>
         <td><button *ngIf="product.status === 1" class="btn btn-success" (click)="onUpdateStatus(product._id, 0)">On</button>
           <button *ngIf="product.status === 0" class="btn btn-dark" (click)="onUpdateStatus(product._id, 1)" >Off</button>
         </td>

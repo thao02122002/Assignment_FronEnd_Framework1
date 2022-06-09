@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
+import { LocalStorageService } from '../service/local-storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CanAccessAdminGuard implements CanActivate {
-  constructor(private router: Router) {
+  constructor(private router: Router
+    ) {
 
   }
   canActivate(
@@ -14,8 +16,10 @@ export class CanAccessAdminGuard implements CanActivate {
     state: RouterStateSnapshot):
      Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
        //lấy ra thông tin của user trong ,ocalStorage
-    const loggedInUser = localStorage.getItem('loggedInUser');
+    const loggedInUser =localStorage.getItem('loggedInUser');
     //kiểm tra xem thông tin có chính xác k
+    console.log(loggedInUser);
+    
     if(loggedInUser) {
       return true;
     }
