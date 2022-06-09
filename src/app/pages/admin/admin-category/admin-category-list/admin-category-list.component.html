@@ -1,0 +1,30 @@
+<div>
+  <div>
+    <a routerLink="/admin/category/create"><button class="btn btn-primary">CREATE</button></a>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>STATUS</th>
+        <th>ACTION</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>{{category._id}}</td>
+        <td>{{category.name}}</td>
+        <td><button *ngIf="category.status === 1" class="btn btn-success" (click)="onUpdateStatus(category._id, 0)">On</button>
+          <button *ngIf="category.status === 0" class="btn btn-dark" (click)="onUpdateStatus(category._id, 1)" >Off</button>
+        </td>
+       
+        <!-- <td><button class="btn btn-info"><a routerLink="/admin/category/{{category._id}}">DETAIL</a></button>
+          <button class="btn btn-success"><a routerLink="/admin/category/edit/{{category._id}}">EDIT</a></button>
+          <button class="btn btn-danger" (click)="onDelete(category._id)">DELETE</button>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -24,6 +24,9 @@ import { ProductDetailComponent } from './pages/client/product-detail/product-de
 // import { CartComponent } from './pages/client/cart/cart.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
 import { CartComponent } from './components/cart/cart.component';
+import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
+import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
+import { AdminCategoryDetailComponent } from './pages/admin/admin-category/admin-category-detail/admin-category-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,10 @@ import { CartComponent } from './components/cart/cart.component';
     ProductDetailComponent,
     // CartComponent,
     SignupComponent,
-    CartComponent
+    CartComponent,
+    AdminCategoryListComponent,
+    AdminCategoryFormComponent,
+    AdminCategoryDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,9 @@ import { ProductComponent } from './pages/client/product/product.component';
 import { ProductDetailComponent } from './pages/client/product-detail/product-detail.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
 import { CartComponent } from './components/cart/cart.component';
+import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
+import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
+import { AdminCategoryDetailComponent } from './pages/admin/admin-category/admin-category-detail/admin-category-detail.component';
 
 const routes: Routes = [
   {
@@ -59,6 +62,27 @@ const routes: Routes = [
           {
             path: ':_id',
             component: AdminProductDetailComponent
+          }
+        ]
+      },
+      {
+        path: 'category',
+        children: [
+          {
+            path: '',
+            component: AdminCategoryListComponent
+          },
+          {
+            path: 'create',
+            component: AdminCategoryFormComponent
+          },
+          {
+            path: 'edit/:_id',
+            component: AdminCategoryFormComponent
+          },
+          {
+            path: ':_id',
+            component: AdminCategoryDetailComponent
           }
         ]
       }
