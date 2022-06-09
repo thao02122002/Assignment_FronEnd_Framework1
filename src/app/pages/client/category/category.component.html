@@ -1,0 +1,12 @@
+<div class="grid grid-cols-10 gap-2" >
+  <div class="col-span-1" *ngFor="let category of categories" >
+    <div class="img">
+      <img src="{{category.image}}" width="240px">
+    </div>
+    <div class="content">
+      <p class="hover:text-red-500 text-center">{{category.name}}</p>
+    </div>
+  </div>
+</div>
+
+
