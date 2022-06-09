@@ -19,3 +19,9 @@ export type ProductCreate = {
   imageUrl?: string,
   // category?: number
 }
+
+export type ProductCart = {
+  _id: string,
+  name: string,
+  value: number
+}

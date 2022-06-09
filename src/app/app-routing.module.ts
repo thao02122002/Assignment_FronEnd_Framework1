@@ -10,8 +10,9 @@ import { CanAccessAdminGuard } from './guards/can-access-admin.guard';
 import { HomeComponent } from './pages/client/home/home.component';
 import { ProductComponent } from './pages/client/product/product.component';
 import { ProductDetailComponent } from './pages/client/product-detail/product-detail.component';
-import { CartComponent } from './pages/client/cart/cart.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
+import { CartComponent } from './components/cart/cart.component';
+
 const routes: Routes = [
   {
     path: '',
