@@ -20,10 +20,10 @@
           <button *ngIf="category.status === 0" class="btn btn-dark" (click)="onUpdateStatus(category._id, 1)" >Off</button>
         </td>
        
-        <!-- <td><button class="btn btn-info"><a routerLink="/admin/category/{{category._id}}">DETAIL</a></button>
+        <td><button class="btn btn-info"><a routerLink="/admin/category/{{category._id}}">DETAIL</a></button>
           <button class="btn btn-success"><a routerLink="/admin/category/edit/{{category._id}}">EDIT</a></button>
           <button class="btn btn-danger" (click)="onDelete(category._id)">DELETE</button>
-        </td> -->
+        </td>
       </tr>
     </tbody>
   </table>

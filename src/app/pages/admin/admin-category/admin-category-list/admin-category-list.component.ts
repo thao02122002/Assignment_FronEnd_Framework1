@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { CategoryService } from 'src/app/service/category.service';
 import { Category } from 'src/app/types/Category';
 
@@ -9,7 +10,8 @@ import { Category } from 'src/app/types/Category';
 })
 export class AdminCategoryListComponent implements OnInit {
 categories: Category[]
-  constructor(private categoryService: CategoryService ) { 
+  constructor(private categoryService: CategoryService,
+    private toastr: ToastrService ) { 
     this.categories = []
   }
 
@@ -20,6 +22,22 @@ categories: Category[]
     this.categoryService.getCategories().subscribe((data) => {
       this.categories = data
     })
+  }
+
+  onDelete(_id: string) {
+    //confirm
+    // kiểm tra dữ liệu
+    //cập nhật lại danh sách
+    const comfirmDelete = confirm('Bạn có chắc chăn smuoons xóa hay k')
+    if(comfirmDelete && _id){
+      this.categoryService.deleteCategory(_id).subscribe((data) => {
+        if(data) {
+          this.toastr.success('Xóa danh mục thành công')
+          this.onGetList()
+        }
+        
+      })
+    }
   }
 
   onUpdateStatus(categoryId: string, newStatus: number) {

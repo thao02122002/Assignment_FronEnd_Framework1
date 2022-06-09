@@ -1,1 +1,25 @@
-<p>admin-category-form works!</p>
+<!-- định nghĩa biến để quản lí form -->
+<button class="btn btn-success"><a routerLink="/admin/category">DANH SÁCH</a></button>
+<form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+<div class="form-group">
+   <label for="">NAME</label>
+   <!-- định nghĩa thuộc tính để lắng nghe input -->
+   <input type="text" class="form-control" formControlName="name">
+   
+   <app-show-validate [field]="categoryForm.get('name')" key="Tên danh mục"></app-show-validate>
+   
+</div>
+
+
+<div class="form-group">
+   <label for="">STATUS</label>
+   <input type="number" class="form-control" formControlName="status">
+   
+   <app-show-validate [field]="categoryForm.get('status')" key="Trạng thái danh mục"></app-show-validate>
+   
+</div>
+ 
+
+<div><button class="btn btn-success" [disabled]="!categoryForm.valid">Submit</button></div>
+</form>
+
