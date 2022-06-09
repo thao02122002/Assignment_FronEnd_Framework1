@@ -23,6 +23,8 @@ category: Category
   ngOnInit(): void {
     const idFromUrl = this.activateRoute.snapshot.params['_id']
     this.categoryService.getCategory(idFromUrl).subscribe(data => {
+      console.log(data);
+      
       this.category = data
       
     })
