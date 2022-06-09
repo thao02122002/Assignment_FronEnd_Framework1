@@ -9,6 +9,14 @@
    <app-show-validate [field]="categoryForm.get('name')" key="Tên danh mục"></app-show-validate>
    
 </div>
+<div class="form-group">
+  <label for="">IMAGE</label>
+  <!-- định nghĩa thuộc tính để lắng nghe input -->
+  <input type="text" class="form-control" formControlName="image">
+  
+  <app-show-validate [field]="categoryForm.get('image')" key="Ảnh danh mục"></app-show-validate>
+  
+</div>
 
 
 <div class="form-group">

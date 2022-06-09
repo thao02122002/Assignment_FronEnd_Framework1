@@ -24,6 +24,9 @@ categoryId: string
                   ]),
                   status: new FormControl('', [
                     Validators.required
+                  ]),
+                  image: new FormControl('', [
+                    Validators.required
                   ])
                 })
                 this.categoryId=''
@@ -36,7 +39,8 @@ categoryId: string
         // cập nhật data cho form
         this.categoryForm.patchValue({
           name: data.name,
-          status: data.status
+          status: data.status,
+          image: data.image
         })
       })
     }

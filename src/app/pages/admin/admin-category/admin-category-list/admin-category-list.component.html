@@ -7,6 +7,7 @@
       <tr>
         <th>ID</th>
         <th>NAME</th>
+        <th>IMAGE</th>
         <th>STATUS</th>
         <th>ACTION</th>
 
@@ -16,6 +17,7 @@
       <tr *ngFor="let category of categories">
         <td>{{category._id}}</td>
         <td>{{category.name}}</td>
+        <td><img src="{{category.image}}" width="100px"></td>
         <td><button *ngIf="category.status === 1" class="btn btn-success" (click)="onUpdateStatus(category._id, 0)">On</button>
           <button *ngIf="category.status === 0" class="btn btn-dark" (click)="onUpdateStatus(category._id, 1)" >Off</button>
         </td>
