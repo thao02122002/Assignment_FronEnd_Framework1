@@ -16,4 +16,17 @@ export class AuthService {
   signup(data: TypeLoginRequest) : Observable<TypeSignupResponse> {
     return this.http.post<TypeSignupResponse>(environment.signup, data)
   }
+  getUsers (): Observable<TypeLoginRequest[]> {
+    return this.http.get<TypeLoginRequest[]>(environment.users);
+ }
+ getUser (_id: string): Observable<TypeLoginRequest> {
+   return this.http.get<TypeLoginRequest>(`${environment.users}/${_id}`)
+
+ }
+ deleteUser (_id: string): Observable<any> {
+     return this.http.delete(`${environment.users}/${_id}`)
+ }
+ updateUser(_id: string, data: TypeLoginResponse): Observable<TypeLoginRequest> {
+  return this.http.patch<TypeLoginRequest>(`${environment.users}/${_id}`,data)
+}
 }

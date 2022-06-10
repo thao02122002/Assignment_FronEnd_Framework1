@@ -1,8 +1,10 @@
 
 
 export type TypeLoginRequest = {
+  _id: string,
   email: string,
-  password: string
+  password: string,
+  role?: number
 };
 
 export type TypeLoginResponse = {
@@ -10,7 +12,8 @@ export type TypeLoginResponse = {
   user: {
     _id: string,
     email: string,
-    password: string
+    password: string,
+    role?: number
   }
   
 };
