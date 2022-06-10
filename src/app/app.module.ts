@@ -29,6 +29,7 @@ import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-c
 import { AdminCategoryDetailComponent } from './pages/admin/admin-category/admin-category-detail/admin-category-detail.component';
 import { CategoryComponent } from './pages/client/category/category.component';
 import { CartClientComponent } from './pages/client/cart-client/cart-client.component';
+import { SlideShowComponent } from './pages/client/slide-show/slide-show.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { CartClientComponent } from './pages/client/cart-client/cart-client.comp
     AdminCategoryFormComponent,
     AdminCategoryDetailComponent,
     CategoryComponent,
-    CartClientComponent
+    CartClientComponent,
+    SlideShowComponent
   ],
   imports: [
     BrowserModule,
