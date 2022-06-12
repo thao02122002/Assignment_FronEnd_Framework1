@@ -9,11 +9,16 @@ import { ProductCart } from 'src/app/types/Product';
   styleUrls: ['./cart-client.component.css']
 })
 export class CartClientComponent implements OnInit {
-  cart: ProductCart[] = []
+  products: ProductCart[] = []
   constructor(private lsService: LocalStorageService) { }
               
   ngOnInit(): void {
+    this.onGetCart()
     
+  }
+  onGetCart() {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]')
+    this.products = cart
   }
   
 

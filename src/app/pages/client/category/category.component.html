@@ -4,7 +4,7 @@
       <img class="transition-transform duration-500 transform hover:rotate-45" src="{{category.image}}" width="240px">
     </div>
     <div class="content">
-      <p class="hover:text-red-500 text-center">{{category.name}}</p>
+      <p class="hover:text-red-500 text-center"><a routerLink="/category/{{category._id}}">{{category.name}}</a> </p>
     </div>
   </div>
 </div>

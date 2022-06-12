@@ -33,6 +33,7 @@ import { SlideShowComponent } from './pages/client/slide-show/slide-show.compone
 import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
 import { AdminUserFormComponent } from './pages/admin/admin-user/admin-user-form/admin-user-form.component';
 import { AdminUserDetailComponent } from './pages/admin/admin-user/admin-user-detail/admin-user-detail.component';
+import { CategoryDetailComponent } from './pages/client/category-detail/category-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +58,8 @@ import { AdminUserDetailComponent } from './pages/admin/admin-user/admin-user-de
     SlideShowComponent,
     AdminUserListComponent,
     AdminUserFormComponent,
-    AdminUserDetailComponent
+    AdminUserDetailComponent,
+    CategoryDetailComponent
   ],
   imports: [
     BrowserModule,

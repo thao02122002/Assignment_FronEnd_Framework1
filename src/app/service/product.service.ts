@@ -18,6 +18,9 @@ export class ProductService {
     return this.http.get<Product>(`${environment.products}/${_id}`)
 
   }
+  getProductByCate(_id: string): Observable<Product> {
+    return this.http.get<Product>(`${environment.categories}/${_id}`)
+  }
   deleteProduct (_id: string): Observable<any> {
       return this.http.delete(`${environment.products}/${_id}`)
   }
