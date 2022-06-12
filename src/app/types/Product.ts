@@ -7,6 +7,7 @@ export type Product = {
   salePrice: number,
   description: string,
   imageUrl: string,
+  category: string
   // category: number
 }
 

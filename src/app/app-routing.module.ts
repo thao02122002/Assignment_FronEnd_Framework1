@@ -19,6 +19,7 @@ import { CartClientComponent } from './pages/client/cart-client/cart-client.comp
 import {AdminUserListComponent} from './pages/admin/admin-user/admin-user-list/admin-user-list.component'
 import {AdminUserFormComponent} from './pages/admin/admin-user/admin-user-form/admin-user-form.component'
 import {AdminUserDetailComponent} from './pages/admin/admin-user/admin-user-detail/admin-user-detail.component'
+import { CategoryDetailComponent } from './pages/client/category-detail/category-detail.component';
 const routes: Routes = [
   {
     path: '',
@@ -42,7 +43,7 @@ const routes: Routes = [
       },
       {
         path: 'category/:_id',
-        component: ProductComponent
+        component: CategoryDetailComponent
       }
     ]
   },
@@ -94,7 +95,7 @@ const routes: Routes = [
         ]
       },
       {
-        path:'user',
+        path:'users',
         children: [
           
             {

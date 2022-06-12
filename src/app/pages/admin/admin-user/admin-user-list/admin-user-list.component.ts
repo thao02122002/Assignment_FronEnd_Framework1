@@ -23,10 +23,26 @@ users: TypeLoginRequest[]
     })
   }
 
-  // onUpdateStatus(userId: string, newRole: number) {
+  // onUpdateRole(userId: string, newRole: number) {
   //   this.userService.updateUser(userId,{role: newRole}).subscribe(data => {
   //     this.onGetList()
   //   })
   // }
+
+  onDelete(_id: string) {
+    //confirm
+    // kiểm tra dữ liệu
+    //cập nhật lại danh sách
+    const comfirmDelete = confirm('Bạn có chắc chăn smuoons xóa hay k')
+    if(comfirmDelete && _id){
+      this.userService.deleteUser(_id).subscribe((data) => {
+        if(data) {
+          this.toastr.success('Xóa sp thành công')
+          this.onGetList()
+        }
+        
+      })
+    }
+  }
 
 }

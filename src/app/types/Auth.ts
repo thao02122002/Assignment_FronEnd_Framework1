@@ -13,7 +13,7 @@ export type TypeLoginResponse = {
     _id: string,
     email: string,
     password: string,
-    role?: number
+    role: number
   }
   
 };
