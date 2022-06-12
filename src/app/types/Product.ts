@@ -18,7 +18,7 @@ export type ProductCreate = {
   salePrice?: number,
   description?: string,
   imageUrl?: string,
-  // category?: number
+  category?: number
 }
 
 export type ProductCart = {

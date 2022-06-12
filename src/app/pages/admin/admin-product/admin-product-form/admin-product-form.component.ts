@@ -58,7 +58,8 @@ productId: string
           salePrice: data.salePrice,
           description: data.description,
           imageUrl: data.imageUrl,
-          status: data.status
+          status: data.status,
+          category: data.category
         })
       })
     }

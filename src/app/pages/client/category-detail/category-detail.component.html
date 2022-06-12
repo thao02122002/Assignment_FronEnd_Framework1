@@ -1,1 +1,22 @@
-<p>category-detail works!</p>
+
+<div class=" pb-4">
+  <div class="border-2 rounded-lg border-gray-200">
+    <h3><strong>Danh sách sản phẩm</strong></h3>
+  <div class="grid grid-cols-12 gap-20 pt-2 pb-8 px-4 ">
+    
+    <div class="col-span-3" *ngFor="let product of products">
+      <div class="img overflow-hidden">
+        <img class="transition-transform duration-500 transform hover:scale-75" src="{{product.imageUrl}}" width="300px">
+      </div>
+      <div class="content">
+        <h3>{{product.name}}</h3>
+        <p class="text-4xl text-yellow-400"><strong> {{product.price}} đ</strong></p>
+        <del class="text-3xl">{{product.salePrice}}</del><br>
+        <button class="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white py-1 px-2 rounded-lg w-64"><a class="no-underline text-red-500" routerLink="/products/{{product._id}}"> Mua hàng</a></button>
+      </div>
+    </div>
+    
+  </div>
+<div class="text-center"><button class="border-2 border-red-500 bg-red-500 text-white py-1 px-2 rounded-lg w-96">Xem thêm</button></div>
+</div>
+ </div>

@@ -17,13 +17,15 @@ products: Product[]
   }
 
   ngOnInit(): void {
-    
+    this.onGetList()
   }
-  // onGetList() {
-  //   const idForm = this.activateRoute.snapshot.params['_id'];
-  //   this.productService.getProductByCate(idForm).subscribe((data) => {
-  //     this.products = data
-  //   })
-  // }
+  onGetList() {
+    const idForm = this.activateRoute.snapshot.params['_id'];
+    this.productService.getProductByCate(idForm).subscribe((data) => {
+      // this.products = data
+      console.log(data);
+      
+    })
+  }
 
 }
