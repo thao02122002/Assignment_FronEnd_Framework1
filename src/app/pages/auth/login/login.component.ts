@@ -32,13 +32,13 @@ loginForm : FormGroup
       console.log(data);
       
       if(data) {
-        this.toastr.success('Đăng nhập thành công, chờ 3s để chuyển trang')
+        this.toastr.success('Đăng nhập thành công, chờ 1s để chuyển trang')
         //nếu login thành công lưu vào localStorage
         localStorage.setItem('loggedInUser', JSON.stringify(data))
         setTimeout(() => {
           // điều hướng quay về admin
-          this.router.navigateByUrl('/admin/products')
-        },3000)
+          this.router.navigateByUrl('')
+        },1000)
       }
       
       

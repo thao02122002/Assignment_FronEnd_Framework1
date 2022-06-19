@@ -20,6 +20,7 @@ import {AdminUserListComponent} from './pages/admin/admin-user/admin-user-list/a
 import {AdminUserFormComponent} from './pages/admin/admin-user/admin-user-form/admin-user-form.component'
 import {AdminUserDetailComponent} from './pages/admin/admin-user/admin-user-detail/admin-user-detail.component'
 import { CategoryDetailComponent } from './pages/client/category-detail/category-detail.component';
+import { LogoutComponent } from './pages/auth/logout/logout.component';
 const routes: Routes = [
   {
     path: '',
@@ -126,6 +127,10 @@ const routes: Routes = [
       {
         path: 'signup',
         component: SignupComponent
+      },
+      {
+        path: 'logout',
+        component: LogoutComponent
       }
     ]
   }

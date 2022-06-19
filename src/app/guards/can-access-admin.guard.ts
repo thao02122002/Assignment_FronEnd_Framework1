@@ -17,14 +17,15 @@ export class CanAccessAdminGuard implements CanActivate {
      Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
        //lấy ra thông tin của user trong ,ocalStorage
     const loggedInUser =localStorage.getItem('loggedInUser');
+    const checkAdmin = JSON.parse(localStorage.getItem('loggedInUser') || '[]')
     //kiểm tra xem thông tin có chính xác k
     console.log(loggedInUser);
     
-    if(loggedInUser) {
+    if(loggedInUser && checkAdmin.user.role === 1) {
       return true;
     }
     //nếu đúng thì tiếp nếu sai thì quay về login
-   this.router.navigateByUrl('/auth/login')
+   this.router.navigateByUrl('')
     return false;
   }
   

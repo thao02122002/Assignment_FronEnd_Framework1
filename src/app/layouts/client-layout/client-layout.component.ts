@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 import { TypeLoginRequest, TypeLoginResponse } from 'src/app/types/Auth';
 
 @Component({
@@ -7,20 +8,20 @@ import { TypeLoginRequest, TypeLoginResponse } from 'src/app/types/Auth';
   styleUrls: ['./client-layout.component.css']
 })
 export class ClientLayoutComponent implements OnInit {
-user: boolean = false
-  constructor() { 
-    
+@Input() user: boolean= true
+  constructor(private router: Router) { 
+   
   }
-
   ngOnInit(): void {
+    this.an()
   }
-  logout(){
-    localStorage.removeItem('loggedInUser')
-  }
+  
   an(){
     const User = JSON.parse(localStorage.getItem('loggedInUser') || '[]') 
     if(User){
-      this.user = true
+      this.user = false
+      console.log(this.user);
+      
     }
      
   }
