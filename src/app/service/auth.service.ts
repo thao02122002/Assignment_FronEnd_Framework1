@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { TypeLoginRequest, TypeLoginResponse, TypeSignupResponse } from '../types/Auth';
+import { TypeLoginRequest, TypeLoginResponse, TypeSignupResponse, User } from '../types/Auth';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,7 @@ export class AuthService {
  deleteUser (_id: string): Observable<any> {
      return this.http.delete(`${environment.users}/${_id}`)
  }
- updateUser(_id: string, data: TypeLoginResponse): Observable<TypeLoginRequest> {
-  return this.http.patch<TypeLoginRequest>(`${environment.users}/${_id}`,data)
+ updateUser(_id: string, data: User): Observable<User> {
+  return this.http.patch<User>(`${environment.users}/${_id}`,data)
 }
 }

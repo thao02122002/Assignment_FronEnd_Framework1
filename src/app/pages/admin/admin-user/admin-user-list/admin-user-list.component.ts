@@ -23,11 +23,12 @@ users: TypeLoginRequest[]
     })
   }
 
-  // onUpdateRole(userId: string, newRole: number) {
-  //   this.userService.updateUser(userId,{role: newRole}).subscribe(data => {
-  //     this.onGetList()
-  //   })
-  // }
+  onUpdateRole(userId: string, newRole: number) {
+    this.userService.updateUser(userId,{role: newRole}).subscribe(data => {
+      this.toastr.success('Update_Role thành công')
+      this.onGetList()
+    })
+  }
 
   onDelete(_id: string) {
     //confirm

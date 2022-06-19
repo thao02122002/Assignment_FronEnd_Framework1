@@ -14,11 +14,11 @@
       <tr *ngFor="let user of users">
         <td>{{user._id}}</td>
         <td>{{user.email}}</td>
-        <td>{{user.role}}</td>
+       
         
-        <!-- <td><button *ngIf="user.role === 1" class="btn btn-success" (click)="onUpdateRole(user.role, 0)">Admin</button>
-          <button *ngIf="user.role === 0" class="btn btn-dark" (click)="onUpdateRole(user.role, 1)" >User</button>
-        </td> -->
+        <td><button *ngIf="user.role === 1" class="btn btn-success" (click)="onUpdateRole(user._id, 0)">Admin</button>
+          <button *ngIf="user.role === 0" class="btn btn-dark" (click)="onUpdateRole(user._id, 1)" >User</button>
+        </td>
         <td><button class="btn btn-info"><a routerLink="/admin/users/{{user._id}}">DETAIL</a></button>
           <button class="btn btn-success"><a routerLink="/admin/users/edit/{{user._id}}">EDIT</a></button>
           <button class="btn btn-danger" (click)="onDelete(user._id)">DELETE</button>

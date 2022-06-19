@@ -12,11 +12,16 @@ export type TypeLoginResponse = {
   user: {
     _id: string,
     email: string,
-    password: string,
     role: number
   }
   
 };
+export type User = {
+  _id?: string,
+  email?: string,
+  password?: string,
+  role?: number
+}
 
 export type TypeSignupResponse = {
   user: {
