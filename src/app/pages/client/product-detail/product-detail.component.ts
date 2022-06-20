@@ -45,6 +45,10 @@ export class ProductDetailComponent implements OnInit {
     const addItem = {
       _id: this.product._id,
       name: this.product.name,
+      price: this.product.price,
+  salePrice: this.product.salePrice,
+  description: this.product.description,
+  imageUrl: this.product.imageUrl,
       value: +this.cartItemValue
     }
 

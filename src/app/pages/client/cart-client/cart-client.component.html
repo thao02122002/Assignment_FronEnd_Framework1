@@ -12,13 +12,14 @@
 
             <div class="row align-items-center" *ngFor="let product of products">
               <div class="col-md-2">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/1.webp"
-                  class="img-fluid" alt="Generic placeholder image">
+                <img src="{{product.imageUrl}}"
+                  class="img-fluid" >
               </div>
               <div class="col-md-2 d-flex justify-content-center">
                 <div>
+                  <p class="lead fw-normal mb-0">NAME</p>
                   <p class="small text-muted mb-4 pb-2">{{product.name}}</p>
-                  <p class="lead fw-normal mb-0">iPad Air</p>
+                 
                 </div>
               </div>
               <div class="col-md-2 d-flex justify-content-center">
@@ -30,20 +31,20 @@
               </div>
               <div class="col-md-2 d-flex justify-content-center">
                 <div>
-                  <p class="small text-muted mb-4 pb-2">Quantity</p>
+                  <p class="small text-muted mb-4 pb-2">QUANTITY</p>
                   <p class="lead fw-normal mb-0">{{product.value}}</p>
                 </div>
               </div>
               <div class="col-md-2 d-flex justify-content-center">
                 <div>
-                  <p class="small text-muted mb-4 pb-2">Price</p>
-                  <p class="lead fw-normal mb-0">$799</p>
+                  <p class="small text-muted mb-4 pb-2">PRICE</p>
+                  <p class="lead fw-normal mb-0">{{product.price}}đ</p>
                 </div>
               </div>
               <div class="col-md-2 d-flex justify-content-center">
                 <div>
-                  <p class="small text-muted mb-4 pb-2">Total</p>
-                  <p class="lead fw-normal mb-0">$799</p>
+                  <p class="small text-muted mb-4 pb-2">SALE</p>
+                  <p class="lead fw-normal mb-0">{{product.salePrice}}</p>
                 </div>
               </div>
             </div>

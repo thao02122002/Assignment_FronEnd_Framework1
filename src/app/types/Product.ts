@@ -24,5 +24,9 @@ export type ProductCreate = {
 export type ProductCart = {
   _id: string,
   name: string,
+  price: number,
+  salePrice: number,
+  description: string,
+  imageUrl: string,
   value: number
 }
