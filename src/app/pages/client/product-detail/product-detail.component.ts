@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Toast, ToastrService } from 'ngx-toastr';
 import { LocalStorageService } from 'src/app/service/local-storage.service';
 import { ProductService } from 'src/app/service/product.service';
 import { Product } from 'src/app/types/Product';
@@ -15,7 +16,8 @@ export class ProductDetailComponent implements OnInit {
   constructor(private productService: ProductService,
               
     private activateRoute: ActivatedRoute,
-    private lsService: LocalStorageService) { 
+    private lsService: LocalStorageService,
+    private toastr: ToastrService) { 
       this.product={
         _id: '',
         name: '',
@@ -51,7 +53,7 @@ export class ProductDetailComponent implements OnInit {
   imageUrl: this.product.imageUrl,
       value: +this.cartItemValue
     }
-
+this.toastr.success('Bạn đã thêm vào giỏ hàng thành công')
     this.lsService.setItem(addItem)
   //5. cập nhật lại giá trị cho ô input
 
